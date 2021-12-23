@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="76.415">
+  <properties />
+  
+  
+            <testcase name="Sign_In_Get_WSS_Response" time="39.005" classname="com.adt.ibp.ui_automation.Privacy.Test.SmokeTests" />
+                <testcase name="Sign_In_Get_WSS_Response" time="37.410" classname="com.adt.ibp.ui_automation.Privacy.Test.SmokeTests" />
+      
+</testsuite>

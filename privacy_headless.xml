@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="com.adt.ibp.ui_automation.Privacy.utilities.Reporting.CustomListeners_ReportNG" />
+        <listener
+                class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure">
+        <classes>
+            <class name="com.adt.ibp.ui_automation.Privacy.Test.PROD">
+                <methods>
+                    <include name="PROD_Privacy_Test"/>
+                </methods>
+            </class>
+            <class name="com.adt.ibp.ui_automation.Privacy.Test.PrePROD">
+                <methods>
+                    <include name="PREProd_Privacy_Test"/>
+                </methods>
+            </class>
+            <class name="com.adt.ibp.ui_automation.Privacy.Test.GCP_INT">
+                <methods>
+                    <include name="INT_Privacy_Test"/>
+                </methods>
+            </class>
+            <class name="com.adt.ibp.ui_automation.Privacy.utilities.HelperMethods.VALIDATE_ibpConfig">
+                <methods>
+                    <exclude name="ibpConfig"/>
+                    <exclude name="camConfig_camStatus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

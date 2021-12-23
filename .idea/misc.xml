@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../../WORK/Frameworks/SE_POMv1/pom.xml" />
+        <option value="$PROJECT_DIR$/../POJO_CLASSES/pom.xml" />
+        <option value="$PROJECT_DIR$/../../WORK/Frameworks/YFrameworkFinal-develop/pom.xml" />
+        <option value="$PROJECT_DIR$/../BDD_API_Framework_ADDPLACE/pom.xml" />
+        <option value="$PROJECT_DIR$/../../GreatCoursesPageObject/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

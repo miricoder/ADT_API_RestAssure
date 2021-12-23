@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.143">
+  <properties />
+  
+  
+            <testcase name="camConfig_camStatus" time="0.028" classname="com.adt.ibp.ui_automation.Privacy.utilities.HelperMethods.VALIDATE_ibpConfig" />
+                <testcase name="ibpConfig" time="0.115" classname="com.adt.ibp.ui_automation.Privacy.utilities.HelperMethods.VALIDATE_ibpConfig" />
+      
+</testsuite>

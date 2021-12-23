@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="GreatCoursesPageObject" />
+        <module name="POJO_CLASSES" />
+        <module name="Selenium_CarsGuide" />
+        <module name="YFrameworkFinal" />
+        <module name="ADTRestAssureFramework" />
+        <module name="BDD_API_Framework" />
+        <module name="ADT_API_RestAssure" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adtApiTest" target="1.8" />
+      <module name="BDD_API_Framekwork_LIBRARYAPI" target="1.8" />
+      <module name="BDD_API_Framework_JIRA" target="1.8" />
+      <module name="LIFE_API_AUTOMATION" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
