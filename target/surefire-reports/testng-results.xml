@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="All Test Suite" duration-ms="121234" started-at="2021-12-23T12:40:24 EST" finished-at="2021-12-23T12:42:25 EST">
+  <suite name="All Test Suite" duration-ms="120737" started-at="2021-12-24T11:50:06 EST" finished-at="2021-12-24T11:52:07 EST">
     <groups>
     </groups>
-    <test name="/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure" duration-ms="121234" started-at="2021-12-23T12:40:24 EST" finished-at="2021-12-23T12:42:25 EST">
+    <test name="/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure" duration-ms="120737" started-at="2021-12-24T11:50:06 EST" finished-at="2021-12-24T11:52:07 EST">
       <class name="com.adt.ibp.ui_automation.Privacy.Test.PrePROD">
-        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="beforeAllTest" is-config="true" duration-ms="1" started-at="2021-12-23T12:41:06 EST" finished-at="2021-12-23T12:41:06 EST">
+        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="beforeAllTest" is-config="true" duration-ms="1" started-at="2021-12-24T11:50:48 EST" finished-at="2021-12-24T11:50:48 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTest -->
-        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="beforeEachTest" is-config="true" duration-ms="1733" started-at="2021-12-23T12:41:06 EST" finished-at="2021-12-23T12:41:08 EST">
+        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="beforeEachTest" is-config="true" duration-ms="1724" started-at="2021-12-24T11:50:48 EST" finished-at="2021-12-24T11:50:49 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTest -->
-        <test-method status="PASS" signature="PREProd_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="PREProd_Privacy_Test" duration-ms="36497" started-at="2021-12-23T12:41:08 EST" data-provider="UI_AUTOMATION_TEST_DATA_PreProd" finished-at="2021-12-23T12:41:44 EST">
+        <test-method status="PASS" signature="PREProd_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="PREProd_Privacy_Test" duration-ms="36650" started-at="2021-12-24T11:50:49 EST" data-provider="UI_AUTOMATION_TEST_DATA_PreProd" finished-at="2021-12-24T11:51:26 EST">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PREProd_Privacy_Test -->
-        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="afterEachTest" is-config="true" duration-ms="110" started-at="2021-12-23T12:41:44 EST" finished-at="2021-12-23T12:41:45 EST">
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="afterEachTest" is-config="true" duration-ms="120" started-at="2021-12-24T11:51:26 EST" finished-at="2021-12-24T11:51:26 EST">
           <params>
             <param index="0">
               <value>
@@ -57,21 +57,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTest -->
-        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="afterAllTest" is-config="true" duration-ms="1023" started-at="2021-12-23T12:41:45 EST" finished-at="2021-12-23T12:41:46 EST">
+        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PrePROD@1b68b9a4]" name="afterAllTest" is-config="true" duration-ms="1024" started-at="2021-12-24T11:51:26 EST" finished-at="2021-12-24T11:51:27 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllTest -->
       </class> <!-- com.adt.ibp.ui_automation.Privacy.Test.PrePROD -->
       <class name="com.adt.ibp.ui_automation.Privacy.Test.PROD">
-        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="beforeAllTest" is-config="true" duration-ms="8" started-at="2021-12-23T12:40:24 EST" finished-at="2021-12-23T12:40:24 EST">
+        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="beforeAllTest" is-config="true" duration-ms="7" started-at="2021-12-24T11:50:06 EST" finished-at="2021-12-24T11:50:06 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTest -->
-        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="beforeEachTest" is-config="true" duration-ms="2479" started-at="2021-12-23T12:40:24 EST" finished-at="2021-12-23T12:40:26 EST">
+        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="beforeEachTest" is-config="true" duration-ms="2471" started-at="2021-12-24T11:50:06 EST" finished-at="2021-12-24T11:50:09 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTest -->
-        <test-method status="PASS" signature="PROD_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="PROD_Privacy_Test" duration-ms="38309" started-at="2021-12-23T12:40:26 EST" data-provider="UI_AUTOMATION_TEST_DATA_PROD" finished-at="2021-12-23T12:41:05 EST">
+        <test-method status="PASS" signature="PROD_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="PROD_Privacy_Test" duration-ms="37516" started-at="2021-12-24T11:50:09 EST" data-provider="UI_AUTOMATION_TEST_DATA_PROD" finished-at="2021-12-24T11:50:46 EST">
           <params>
             <param index="0">
               <value>
@@ -102,7 +102,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PROD_Privacy_Test -->
-        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="afterEachTest" is-config="true" duration-ms="108" started-at="2021-12-23T12:41:05 EST" finished-at="2021-12-23T12:41:05 EST">
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="afterEachTest" is-config="true" duration-ms="111" started-at="2021-12-24T11:50:46 EST" finished-at="2021-12-24T11:50:47 EST">
           <params>
             <param index="0">
               <value>
@@ -113,21 +113,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTest -->
-        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="afterAllTest" is-config="true" duration-ms="1025" started-at="2021-12-23T12:41:05 EST" finished-at="2021-12-23T12:41:06 EST">
+        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.PROD@64d2d351]" name="afterAllTest" is-config="true" duration-ms="1024" started-at="2021-12-24T11:50:47 EST" finished-at="2021-12-24T11:50:48 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllTest -->
       </class> <!-- com.adt.ibp.ui_automation.Privacy.Test.PROD -->
       <class name="com.adt.ibp.ui_automation.Privacy.Test.GCP_INT">
-        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="beforeAllTest" is-config="true" duration-ms="1" started-at="2021-12-23T12:41:46 EST" finished-at="2021-12-23T12:41:46 EST">
+        <test-method status="PASS" signature="beforeAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="beforeAllTest" is-config="true" duration-ms="1" started-at="2021-12-24T11:51:27 EST" finished-at="2021-12-24T11:51:27 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTest -->
-        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="beforeEachTest" is-config="true" duration-ms="1753" started-at="2021-12-23T12:41:46 EST" finished-at="2021-12-23T12:41:47 EST">
+        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="beforeEachTest" is-config="true" duration-ms="1731" started-at="2021-12-24T11:51:27 EST" finished-at="2021-12-24T11:51:29 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTest -->
-        <test-method status="PASS" signature="INT_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="INT_Privacy_Test" duration-ms="36460" started-at="2021-12-23T12:41:47 EST" data-provider="UI_AUTOMATION_TEST_DATA_INT" finished-at="2021-12-23T12:42:24 EST">
+        <test-method status="PASS" signature="INT_Privacy_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="INT_Privacy_Test" duration-ms="36615" started-at="2021-12-24T11:51:29 EST" data-provider="UI_AUTOMATION_TEST_DATA_INT" finished-at="2021-12-24T11:52:06 EST">
           <params>
             <param index="0">
               <value>
@@ -158,7 +158,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- INT_Privacy_Test -->
-        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="afterEachTest" is-config="true" duration-ms="109" started-at="2021-12-23T12:42:24 EST" finished-at="2021-12-23T12:42:24 EST">
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="afterEachTest" is-config="true" duration-ms="108" started-at="2021-12-24T11:52:06 EST" finished-at="2021-12-24T11:52:06 EST">
           <params>
             <param index="0">
               <value>
@@ -169,7 +169,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTest -->
-        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="afterAllTest" is-config="true" duration-ms="1026" started-at="2021-12-23T12:42:24 EST" finished-at="2021-12-23T12:42:25 EST">
+        <test-method status="PASS" signature="afterAllTest()[pri:0, instance:com.adt.ibp.ui_automation.Privacy.Test.GCP_INT@4f9a3314]" name="afterAllTest" is-config="true" duration-ms="1023" started-at="2021-12-24T11:52:06 EST" finished-at="2021-12-24T11:52:07 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllTest -->
