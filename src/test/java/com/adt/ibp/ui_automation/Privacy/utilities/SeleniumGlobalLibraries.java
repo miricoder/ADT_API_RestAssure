@@ -55,6 +55,38 @@ public class SeleniumGlobalLibraries {
 		driver = _driver;
 	}
 
+
+	/**
+	 * Delete Files Older than n number Of days Using Java
+	 * n=30days in the ase of extent reports
+	 */
+	public void removeOldFiles(long days, String fileExtension) {
+
+		File folder = new File("src/test/resources/reports");
+
+		if (folder.exists()) {
+
+			File[] listFiles = folder.listFiles();
+
+			long eligibleForDeletion = System.currentTimeMillis() -
+					(days * 24 * 60 * 60 * 1000L);
+
+			for (File listFile : listFiles) {
+
+				if (listFile.getName().endsWith(fileExtension) &&
+						listFile.lastModified() < eligibleForDeletion) {
+
+					if (!listFile.delete()) {
+
+						System.out.println("Sorry Unable to Delete Files..");
+
+					}
+				}
+			}
+		}
+	}
+
+
 	/**
 	 * Driver/Browsers/Test Envoriment Setup
 	 * 

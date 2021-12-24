@@ -1,12 +1,13 @@
 package com.adt.ibp.ui_automation.Privacy.utilities.Reporting;
 
+import com.adt.ibp.ui_automation.Privacy.utilities.Base;
 import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 
 import java.io.File;
 import java.util.Calendar;
 
-public class ExtentManager {
+public class ExtentManager extends Base {
 
 	private static ExtentReports extent;
 
@@ -41,6 +42,7 @@ public class ExtentManager {
 					false, DisplayOrder.OLDEST_FIRST);
 			extent.loadConfig(new File(
 					System.getProperty("user.dir") + "/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ReportsConfig.xml"));
+			library.removeOldFiles(30, ".html");
 		}
 		return extent;
 	}
