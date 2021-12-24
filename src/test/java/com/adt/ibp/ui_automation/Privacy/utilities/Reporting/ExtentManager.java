@@ -35,8 +35,8 @@ public class ExtentManager {
 
 
 			//creates the new file to be saved
-//			extent = new ExtentReports(System.getProperty("user.dir") + "/src/test/resources/reports/"+fullDate+".html",
-					extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/html/"+fullDate+".html",
+			extent = new ExtentReports(System.getProperty("user.dir") + "/src/test/resources/reports/"+fullDate+".html",
+//					extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/html/"+fullDate+".html",
 					false, DisplayOrder.OLDEST_FIRST);
 			extent.loadConfig(new File(
 					System.getProperty("user.dir") + "/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ReportsConfig.xml"));
