@@ -42,7 +42,7 @@ public class ExtentManager extends Base {
 					false, DisplayOrder.OLDEST_FIRST);
 			extent.loadConfig(new File(
 					System.getProperty("user.dir") + "/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ReportsConfig.xml"));
-			library.removeOldFiles(30, ".html");
+//			library.removeOldFiles(30, ".html");
 		}
 		return extent;
 	}
