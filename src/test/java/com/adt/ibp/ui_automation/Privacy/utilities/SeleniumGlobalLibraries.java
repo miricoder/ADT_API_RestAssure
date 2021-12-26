@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -50,6 +51,7 @@ public class SeleniumGlobalLibraries {
 //[USED FOR REPORTER NG SCREENSHOT]
 	public static String screenShotName;
 	public static Properties LOC = new Properties();
+	public List<String> errorScreenshots;
 
 	public SeleniumGlobalLibraries(WebDriver _driver) {
 		driver = _driver;
@@ -833,6 +835,51 @@ public class SeleniumGlobalLibraries {
 			assertTrue(false);
 		}
 
+	}
+	public List<String> automaticallyAttachErrorImgToEmail() {
+		List<String> fileNames = new ArrayList<>();
+		JavaPropertiesManager propertyReader = new JavaPropertiesManager("src/test/resources/DynamicValueFiles/dynamicConfig.properties");
+		String tempTimeStamp = propertyReader.readProperty("sessionTime");
+		String numberTimeStamp = tempTimeStamp.replaceAll("_", "");
+		long testStartTime = Long.parseLong(numberTimeStamp);
+
+		// first check if error-screenshot folder has file
+		File file = new File("target/screenshots");
+		if (file.isDirectory()) {
+			if (file.list().length > 0) {
+				File[] screenshotFiles = file.listFiles();
+				for (int i = 0; i < screenshotFiles.length; i++) {
+					// checking if file is a file, not a folder
+					if (screenshotFiles[i].isFile()) {
+						String eachFileName = screenshotFiles[i].getName();
+						logger.debug("Testing file names: " + eachFileName);
+						int indexOf20 = searchSubstringInString("20", eachFileName);
+						String timeStampFromScreenshotFile = eachFileName.substring(indexOf20,
+								eachFileName.length() - 4);
+						logger.debug("Testing file timestamp: " + timeStampFromScreenshotFile);
+						String fileNumberStamp = timeStampFromScreenshotFile.replaceAll("_", "");
+						long screenshotfileTime = Long.parseLong(fileNumberStamp);
+
+						testStartTime = Long.parseLong(numberTimeStamp.substring(0, 14));
+						screenshotfileTime = Long.parseLong(fileNumberStamp.substring(0, 14));
+						if (screenshotfileTime > testStartTime) {
+							fileNames.add("target/screenshots/" + eachFileName);
+						}
+					}
+				}
+
+			}
+		}
+		errorScreenshots = fileNames;
+		return fileNames;
+	}
+	public int searchSubstringInString(String target, String message) {
+		int targetIndex = 0;
+		for (int i = -1; (i = message.indexOf(target, i + 1)) != -1;) {
+			targetIndex = i;
+			break;
+		}
+		return targetIndex;
 	}
 
 }

@@ -72,7 +72,7 @@ public class CustomListeners_ReportNG extends Base implements ITestListener, ISu
 		 */
 //		test.log(LogStatus.FAIL,
 //				result.getName().toLowerCase() + "Failed Test Case with Exception : " + result.getThrowable());
-		test.log(LogStatus.FAIL, "@FULL TEST STATUS:  ==> "+ result.getThrowable());
+//		test.log(LogStatus.FAIL, "@FULL TEST STATUS:  ==> "+ result.getThrowable());
 		test.log(LogStatus.FAIL, test.addScreenCapture(library.screenshotName));
 		
 

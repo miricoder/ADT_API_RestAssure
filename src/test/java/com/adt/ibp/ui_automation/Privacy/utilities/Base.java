@@ -1,6 +1,7 @@
 package com.adt.ibp.ui_automation.Privacy.utilities;
 
 
+import com.adt.ibp.Utils.EmailManager;
 import com.adt.ibp.ui_automation.Privacy.utilities.Reporting.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -14,7 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.log4testng.Logger;
 
 import java.io.IOException;
-import java.util.Properties;
+import java.util.*;
 
 //chrome: grid location/node.json file: \tmp\webdriver\chromedriver\chromedriver_81.0_32bit.exe
 public class Base {
@@ -28,6 +29,7 @@ public class Base {
 	public boolean isCaptureScreenshot = true;
 	public static Properties LOC = new Properties();
 	protected RemoteWebDriver remoteDriver;
+	public String isAutoSendEmail;
 
 	// [Extent Report_v2]
 	public ExtentReports reportE = ExtentManager.getInstance();
@@ -54,6 +56,7 @@ public class Base {
 		paramBuild = jpm.readProperty("paramBuild");
 //		paramBuild = confReader.getProperty("src/test/resources/Configuration/test_conf_prop.properties","paramBuild");
 		library = new SeleniumGlobalLibraries(driver);
+		isAutoSendEmail = jpm.readProperty("autoEmail");
 
 
 	}
@@ -63,7 +66,46 @@ public class Base {
 		if (driver != null) {
 			driver.quit();
 		}
+
+
+
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.HOUR_OF_DAY, 13);
+		c.set(Calendar.MINUTE, 05);
+		c.set(Calendar.SECOND, 00);
+
+		String months = String.valueOf(c.get(Calendar.MONTH));
+		String dates = String.valueOf(c.get(Calendar.DATE));
+		String year = String.valueOf(c.get(Calendar.YEAR));
+		String fullDate = ""+year+"_"+months+"_"+dates;
+
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				//Call your method here
+				// Sending all the reports, screenshots, and log files via email
+				List<String> screenshots = new ArrayList<>();
+				EmailManager emailSender = new EmailManager();
+//				emailSender.attachmentFiles.add("target/logs/log4j-selenium.log");
+				emailSender.attachmentFiles.add("ADT_API_RestAssure/src/test/resources/reports/"+fullDate+".html");
+				screenshots = library.automaticallyAttachErrorImgToEmail();
+				if(screenshots.size() != 0){
+					for(String attachFile : screenshots){
+						emailSender.attachmentFiles.add(attachFile);
+					}
+				}
+
+				emailSender.toAddress = "qa.group.notes@gmail.com";
+				emailSender.ccAddress = "mirzayev.mirali19@gmail.com";
+
+				if(isAutoSendEmail.contains("true")){
+					emailSender.sendEmail(emailSender.attachmentFiles);
+				}
+			}
+		}, c.getTime(), 86400000);
 	}
+
 
 //	@Parameters("grid3Browser")
 	@BeforeMethod()
