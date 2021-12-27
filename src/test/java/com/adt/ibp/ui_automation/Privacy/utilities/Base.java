@@ -8,14 +8,14 @@ import com.relevantcodes.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 import org.testng.log4testng.Logger;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Properties;
 
 //chrome: grid location/node.json file: \tmp\webdriver\chromedriver\chromedriver_81.0_32bit.exe
 public class Base {
@@ -63,47 +63,13 @@ public class Base {
 
 	@AfterClass
 	public void afterAllTest() {
+		logger.info("After all test completed...");
 		if (driver != null) {
 			driver.quit();
 		}
 
 
 
-		Calendar c = Calendar.getInstance();
-		c.set(Calendar.HOUR_OF_DAY, 13);
-		c.set(Calendar.MINUTE, 05);
-		c.set(Calendar.SECOND, 00);
-
-		String months = String.valueOf(c.get(Calendar.MONTH));
-		String dates = String.valueOf(c.get(Calendar.DATE));
-		String year = String.valueOf(c.get(Calendar.YEAR));
-		String fullDate = ""+year+"_"+months+"_"+dates;
-
-		Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				//Call your method here
-				// Sending all the reports, screenshots, and log files via email
-				List<String> screenshots = new ArrayList<>();
-				EmailManager emailSender = new EmailManager();
-//				emailSender.attachmentFiles.add("target/logs/log4j-selenium.log");
-				emailSender.attachmentFiles.add("ADT_API_RestAssure/src/test/resources/reports/"+fullDate+".html");
-				screenshots = library.automaticallyAttachErrorImgToEmail();
-				if(screenshots.size() != 0){
-					for(String attachFile : screenshots){
-						emailSender.attachmentFiles.add(attachFile);
-					}
-				}
-
-				emailSender.toAddress = "qa.group.notes@gmail.com";
-				emailSender.ccAddress = "mirzayev.mirali19@gmail.com";
-
-				if(isAutoSendEmail.contains("true")){
-					emailSender.sendEmail(emailSender.attachmentFiles);
-				}
-			}
-		}, c.getTime(), 86400000);
 	}
 
 
@@ -128,4 +94,45 @@ public class Base {
 
 		
 	}
+	@AfterSuite
+	public void afterSuite(){
+		Calendar calendar = Calendar.getInstance();
+		String months = String.valueOf(calendar.get(Calendar.MONTH)+1);
+		String dates = String.valueOf(calendar.get(Calendar.DATE));
+		String year = String.valueOf(calendar.get(Calendar.YEAR));
+		String fullDate = ""+year+"_"+months+"_"+dates;
+		EmailManager sender = new EmailManager();
+//		sender.toAddress = "musabaytechcorp@gmail.com;training@musabaytechnologies.com";
+		sender.toAddress = "qa.group.notes@gmail.com;";
+		sender.ccAddress = "qa.group.notes@gmail.com;";
+
+		List<String> screenshots = new ArrayList<>();
+//		screenshots.add("target/logs/log4j-selenium.log");
+//		screenshots.add("target/logs/Selenium-Report.html");
+//		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824100902222.png");
+//		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824101303778.png");
+		screenshots.add(System.getProperty("user.dir") + "/src/test/resources/reports/"+fullDate+".html");
+		sender.sendEmail(screenshots);
+//		ZonedDateTime now = ZonedDateTime.now(ZoneId.of("America/Maryland"));
+//		ZonedDateTime nextRun = now.withHour(20).withMinute(05).withSecond(0);
+//		if(now.compareTo(nextRun) > 0)
+//			nextRun = nextRun.plusDays(1);
+//
+//		Duration duration = Duration.between(now, nextRun);
+//		long initalDelay = duration.getSeconds();
+//
+//		ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+//		scheduler.scheduleAtFixedRate(new Runnable() {
+//										  @Override
+//										  public void run() {
+//
+//
+//											  sender.sendEmail(screenshots);
+//										  }
+//									  },
+//				initalDelay,
+//				TimeUnit.DAYS.toSeconds(1),
+//				TimeUnit.SECONDS);
+	}
+
 }

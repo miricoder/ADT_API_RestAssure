@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue={"com.adt.ibp.stepDefinitions"},
         dryRun = false,
         monochrome = true,
-        tags = { "@LoginWithJWT" },
+        tags = "@LoginWithJWT",
         plugin = { "pretty", "html:target/cucumber-html-report", "json:target/cucumber.json" }
 )
 public class APITestRunner {

@@ -25,7 +25,7 @@ public class ExtentManager extends Base {
 			 year_month_date (String fullDate = ""+year+"_"+months+"_"+dates;)
 			 */
 			Calendar calendar = Calendar.getInstance();
-			String months = String.valueOf(calendar.get(Calendar.MONTH));
+			String months = String.valueOf(calendar.get(Calendar.MONTH)+1);
 			String dates = String.valueOf(calendar.get(Calendar.DATE));
 			String year = String.valueOf(calendar.get(Calendar.YEAR));
 			String fullDate = ""+year+"_"+months+"_"+dates;

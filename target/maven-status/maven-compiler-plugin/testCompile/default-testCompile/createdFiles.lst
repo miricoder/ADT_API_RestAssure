@@ -1,6 +1,6 @@
 com/adt/ibp/ISOLATED/NetMock_PLAT1509.class
 com/adt/ibp/ISOLATED/NetMock_URLVerification.class
-com/adt/ibp/ui_automation/Privacy/Test/ScheduledActivities.class
+com/adt/ibp/Utils/EmailManager.class
 com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ExtentManager.class
 com/adt/ibp/backend_automation/RequestBuilder/IANBuilder.class
 com/adt/ibp/backend_automation/RequestBuilder/IAN.class
@@ -9,7 +9,6 @@ com/adt/ibp/ISOLATED/NetMock_AllUrlsInXHR.class
 com/adt/ibp/backend_automation/RequestBuilder/SessionPrefOBJ.class
 com/adt/ibp/ISOLATED/JWTToken.class
 com/adt/ibp/ui_automation/Privacy/Test/PrePROD.class
-com/adt/ibp/ui_automation/Privacy/utilities/Base$1.class
 com/adt/ibp/ui_automation/Privacy/utilities/JavaPropertiesManager.class
 com/adt/ibp/ISOLATED/CaptureWebSocketORIG.class
 com/adt/ibp/ui_automation/Privacy/utilities/SeleniumGlobalLibraries$1.class
@@ -19,9 +18,9 @@ com/adt/ibp/Utils/FileReader.class
 com/adt/ibp/ui_automation/Privacy/utilities/Base.class
 com/adt/ibp/ui_automation/Privacy/utilities/HelperMethods/VALIDATE_ibpConfig.class
 com/adt/ibp/Utils/CreateFileWriteToFile.class
+com/adt/ibp/Utils/EmailManager$1.class
 com/adt/ibp/ui_automation/Privacy/pages/SubscriberPage.class
 com/adt/ibp/ui_automation/Privacy/pages/AdminPage.class
-com/adt/ibp/ui_automation/Privacy/Test/ScheduledActivities$1.class
 com/adt/ibp/Utils/DeleteFilesFromDir.class
 com/adt/ibp/ui_automation/Privacy/Test/GCP_INT.class
 com/adt/ibp/backend_automation/stepDefinitions/LoginWithJWT.class

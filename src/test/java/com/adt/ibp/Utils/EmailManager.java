@@ -17,7 +17,7 @@ public class EmailManager {
 	public static void main(String[] args) {
 		BasicConfigurator.configure();
 		Calendar calendar = Calendar.getInstance();
-		String months = String.valueOf(calendar.get(Calendar.MONTH));
+		String months = String.valueOf(calendar.get(Calendar.MONTH)+1);
 		String dates = String.valueOf(calendar.get(Calendar.DATE));
 		String year = String.valueOf(calendar.get(Calendar.YEAR));
 		String fullDate = ""+year+"_"+months+"_"+dates;
@@ -36,9 +36,10 @@ public class EmailManager {
 //		screenshots.add("target/logs/Selenium-Report.html");
 //		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824100902222.png");
 //		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824101303778.png");
-		screenshots.add("ADT_API_RestAssure/src/test/resources/reports/"+fullDate+".html");
+		screenshots.add(System.getProperty("user.dir") + "/src/test/resources/reports/"+fullDate+".html");
 
 		sender.sendEmail(screenshots);
+
 	}
 	
 	public String toAddress = "";
@@ -49,11 +50,11 @@ public class EmailManager {
 
 
 	public void sendEmail(List<String> attachments){
-		String emailBody = "Test email by JavaMail API example."
-	+ "<br><br> Regards, <br>Test Automation Team<br>";
+		String emailBody = "Hey Team, Please find the Privacy Monitor Test Report attached...."
+	+ "<br><br> Regards, <br>MM<br>";
 
 		sendEmail("smtp.gmail.com", "587", "mirzayev.mirali19@gmail.com", "rrpbskukayzcksxk",
-				"Please find Privacy Monitor Test Report below!",	emailBody, attachments);
+				"Privacy Monitor Test Report",	emailBody, attachments);
 	}
 
 	public void sendEmail(String host, String port, final String emailUserID, final String emailUserPassword,

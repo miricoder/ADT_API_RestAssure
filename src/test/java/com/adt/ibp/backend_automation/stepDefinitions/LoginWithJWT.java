@@ -1,11 +1,11 @@
 package com.adt.ibp.backend_automation.stepDefinitions;
 
-import com.adt.ibp.backend_automation.RequestBuilder.TokenBuilder;
 import com.adt.ibp.Utils.ConfigurationReader;
+import com.adt.ibp.backend_automation.RequestBuilder.TokenBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
-import io.cucumber.core.api.Scenario;
+import cucumber.api.Scenario;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

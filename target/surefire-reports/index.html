@@ -5,8 +5,7 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -24,7 +23,6 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -132,15 +130,15 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.adt.ibp.ui_automation.Privacy.Test.PROD</span>
+              <span class="class-name">com.adt.ibp.ui_automation.Privacy.Test.PrePROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="PROD_Privacy_Test(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !...)">
-                  </a> <!-- PROD_Privacy_Test(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !...) -->
-                  <span class="method-name">PROD_Privacy_Test</span>
-                  <span class="parameters">(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !look@book5, 873093643)</span>
+                  <a name="PREProd_Privacy_Test(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimir...)">
+                  </a> <!-- PREProd_Privacy_Test(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimir...) -->
+                  <span class="method-name">PREProd_Privacy_Test</span>
+                  <span class="parameters">(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimirzayev@adt.com, !look@book5, 1611576070)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,15 +162,15 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.adt.ibp.ui_automation.Privacy.Test.PrePROD</span>
+              <span class="class-name">com.adt.ibp.ui_automation.Privacy.Test.PROD</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="PREProd_Privacy_Test(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimir...)">
-                  </a> <!-- PREProd_Privacy_Test(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimir...) -->
-                  <span class="method-name">PREProd_Privacy_Test</span>
-                  <span class="parameters">(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimirzayev@adt.com, !look@book5, 1611576070)</span>
+                  <a name="PROD_Privacy_Test(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !...)">
+                  </a> <!-- PROD_Privacy_Test(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !...) -->
+                  <span class="method-name">PROD_Privacy_Test</span>
+                  <span class="parameters">(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !look@book5, 873093643)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -258,15 +256,15 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PROD_Privacy_Test')
 data.setCell(0, 2, 'com.adt.ibp.ui_automation.Privacy.Test.PROD')
-data.setCell(0, 3, 37704);
+data.setCell(0, 3, 37838);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'INT_Privacy_Test')
 data.setCell(1, 2, 'com.adt.ibp.ui_automation.Privacy.Test.GCP_INT')
-data.setCell(1, 3, 36648);
+data.setCell(1, 3, 36957);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'PREProd_Privacy_Test')
 data.setCell(2, 2, 'com.adt.ibp.ui_automation.Privacy.Test.PrePROD')
-data.setCell(2, 3, 36564);
+data.setCell(2, 3, 36567);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
@@ -286,9 +284,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.adt.ibp.ui_automation.Privacy.Test.PrePROD</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.adt.ibp.ui_automation.Privacy.Test.GCP_INT</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.adt.ibp.ui_automation.Privacy.utilities.HelperMethods.VALIDATE_ibpConfig</span>
               <div class="ignored-methods-div">
@@ -313,70 +325,76 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeEachTest</span>
-                <span class="method-start">91 ms</span>
+                <span class="method-start">99 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">PROD_Privacy_Test(https://admin.bluebyadt.com/#/login, https://admin.bluebyadt.com/#/global, miralimirzayev@adt.com, !...)</span>
-                <span class="method-start">3007 ms</span>
+                <span class="method-start">2628 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTest([TestResult name=PROD_Privacy_Test status=SUCCESS method=PROD.PROD_Privacy_Test(java.lang.String, ja...)</span>
-                <span class="method-start">40891 ms</span>
+                <span class="method-start">40715 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterAllTest</span>
-                <span class="method-start">41000 ms</span>
+                <span class="method-start">40827 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.adt.ibp.ui_automation.Privacy.Test.PrePROD</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeAllTest</span>
-                <span class="method-start">42027 ms</span>
+                <span class="method-start">41855 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeEachTest</span>
-                <span class="method-start">42166 ms</span>
+                <span class="method-start">41990 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">PREProd_Privacy_Test(https://admin.preprod.bluebyadt.com/#/login, https://admin.preprod.bluebyadt.com/#/global, miralimir...)</span>
-                <span class="method-start">43905 ms</span>
+                <span class="method-start">43677 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTest([TestResult name=PREProd_Privacy_Test status=SUCCESS method=PrePROD.PREProd_Privacy_Test(java.lang.S...)</span>
-                <span class="method-start">80489 ms</span>
+                <span class="method-start">80281 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterAllTest</span>
-                <span class="method-start">80596 ms</span>
+                <span class="method-start">80393 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.adt.ibp.ui_automation.Privacy.Test.GCP_INT</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeAllTest</span>
-                <span class="method-start">81619 ms</span>
+                <span class="method-start">81418 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeEachTest</span>
-                <span class="method-start">81803 ms</span>
+                <span class="method-start">81562 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">INT_Privacy_Test(https://admin.int.bluebyadt.com/#/global, https://admin.int.bluebyadt.com/#/global, miralimirzayev@a...)</span>
-                <span class="method-start">83558 ms</span>
+                <span class="method-start">83259 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTest([TestResult name=INT_Privacy_Test status=SUCCESS method=GCP_INT.INT_Privacy_Test(java.lang.String, j...)</span>
-                <span class="method-start">120224 ms</span>
+                <span class="method-start">120239 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterAllTest</span>
-                <span class="method-start">120331 ms</span>
+                <span class="method-start">120347 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.adt.ibp.ui_automation.Privacy.Test.PROD</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">122847 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

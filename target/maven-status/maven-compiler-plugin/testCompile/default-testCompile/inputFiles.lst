@@ -13,6 +13,7 @@
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/FileReader.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Base.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ExtentManager.java
+/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/EmailManager.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/backend_automation/RequestBuilder/IAN.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/backend_automation/RequestBuilder/IANBuilder.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ISOLATED/WebSocketResponseTestORIG.java
