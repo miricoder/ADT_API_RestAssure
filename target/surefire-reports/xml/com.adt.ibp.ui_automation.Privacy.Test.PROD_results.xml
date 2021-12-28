@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="37.838">
+           time="37.455">
   <properties />
   
   
-            <testcase name="PROD_Privacy_Test" time="37.838" classname="com.adt.ibp.ui_automation.Privacy.Test.PROD" />
+            <testcase name="PROD_Privacy_Test" time="37.455" classname="com.adt.ibp.ui_automation.Privacy.Test.PROD" />
       
 </testsuite>

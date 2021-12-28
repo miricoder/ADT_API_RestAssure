@@ -20,6 +20,7 @@
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/HelperMethods/VALIDATE_ibpConfig.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ISOLATED/JWTToken.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/SeleniumGlobalLibraries.java
+/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/TextFileReaderWriter.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/JavaPropertiesManager.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ISOLATED/NetMock_PLAT1509.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/DeleteFilesFromDir.java

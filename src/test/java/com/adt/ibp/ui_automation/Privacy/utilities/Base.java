@@ -1,16 +1,20 @@
 package com.adt.ibp.ui_automation.Privacy.utilities;
 
 
+import com.adt.ibp.Utils.DeleteFilesFromDir;
 import com.adt.ibp.Utils.EmailManager;
 import com.adt.ibp.ui_automation.Privacy.utilities.Reporting.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.log4testng.Logger;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,9 +40,6 @@ public class Base {
 	public static ExtentTest test;
 	// [Excel]
 //	public static ExcelReader excel;
-	
-	
-
 	@BeforeClass
 	public void beforeAllTest() throws IOException {
 		
@@ -95,44 +96,51 @@ public class Base {
 		
 	}
 	@AfterSuite
-	public void afterSuite(){
+	public void afterSuite() throws IOException {
 		Calendar calendar = Calendar.getInstance();
 		String months = String.valueOf(calendar.get(Calendar.MONTH)+1);
 		String dates = String.valueOf(calendar.get(Calendar.DATE));
 		String year = String.valueOf(calendar.get(Calendar.YEAR));
-		String fullDate = ""+year+"_"+months+"_"+dates;
+		String fullDate = year+"_"+months+"_"+dates;
 		EmailManager sender = new EmailManager();
 //		sender.toAddress = "musabaytechcorp@gmail.com;training@musabaytechnologies.com";
 		sender.toAddress = "qa.group.notes@gmail.com;";
 		sender.ccAddress = "qa.group.notes@gmail.com;";
 
 		List<String> screenshots = new ArrayList<>();
-//		screenshots.add("target/logs/log4j-selenium.log");
-//		screenshots.add("target/logs/Selenium-Report.html");
-//		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824100902222.png");
-//		screenshots.add("target/screenshots/buy_TheAgingBrainCoursTest20190824101303778.png");
+
 		screenshots.add(System.getProperty("user.dir") + "/src/test/resources/reports/"+fullDate+".html");
-		sender.sendEmail(screenshots);
-//		ZonedDateTime now = ZonedDateTime.now(ZoneId.of("America/Maryland"));
-//		ZonedDateTime nextRun = now.withHour(20).withMinute(05).withSecond(0);
-//		if(now.compareTo(nextRun) > 0)
-//			nextRun = nextRun.plusDays(1);
+
+
+//		TextFileReaderWriter readFiles = new TextFileReaderWriter("src/test/resources/DynamicValueFiles/+ListOfIans.txt");
+//		String listOfIANS=readFiles.readFile();
 //
-//		Duration duration = Duration.between(now, nextRun);
-//		long initalDelay = duration.getSeconds();
+//		for(int i=0; i<=listOfIANS.length(); i++){
 //
-//		ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-//		scheduler.scheduleAtFixedRate(new Runnable() {
-//										  @Override
-//										  public void run() {
-//
-//
-//											  sender.sendEmail(screenshots);
-//										  }
-//									  },
-//				initalDelay,
-//				TimeUnit.DAYS.toSeconds(1),
-//				TimeUnit.SECONDS);
+//			screenshots.add(System.getProperty("user.dir") + "/src/test/resources/DynamicValueFiles/"+i+"_cameraStatusList_"+fullDate+".json");
+//			screenshots.add(System.getProperty("user.dir") + "/src/test/resources/DynamicValueFiles/"+i+"_ibpConfig_"+fullDate+".json");
+//			sender.sendEmail(screenshots);
+//		}
+		String file = "src/test/resources/DynamicValueFiles/ListOfIans.txt";
+		LineIterator it = FileUtils.lineIterator(new File(file), "UTF-8");
+		String line=null;
+		try {
+			while (it.hasNext()) {
+				 line = it.nextLine();
+				// do something with line
+//				System.out.println(line+"_cameraStatusList"+fullDate+".json");
+//				System.out.println(line+"_ibpConfig"+fullDate+".json");
+				screenshots.add(System.getProperty("user.dir") + "/src/test/resources/DynamicValueFiles/"+line+"_cameraStatusList"+"_"+fullDate+".json");
+				screenshots.add(System.getProperty("user.dir") + "/src/test/resources/DynamicValueFiles/"+line+"_ibpConfig"+"_"+fullDate+".json");
+				sender.sendEmail(screenshots);
+			}
+			DeleteFilesFromDir deleteCameraStatusListJsonFile = new DeleteFilesFromDir("/src/test/resources/DynamicValueFiles/"+line+"_cameraStatusList"+"_"+fullDate+".json");
+			DeleteFilesFromDir deleteIbpConfigJsonFiles = new DeleteFilesFromDir("/src/test/resources/DynamicValueFiles/"+line+"_ibpConfig"+"_"+fullDate+".json");
+
+		} finally {
+			it.close();
+		}
+
 	}
 
 }

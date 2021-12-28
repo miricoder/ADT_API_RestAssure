@@ -1,5 +1,6 @@
 com/adt/ibp/ISOLATED/NetMock_PLAT1509.class
 com/adt/ibp/ISOLATED/NetMock_URLVerification.class
+com/adt/ibp/ui_automation/Privacy/utilities/TextFileReaderWriter.class
 com/adt/ibp/Utils/EmailManager.class
 com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ExtentManager.class
 com/adt/ibp/backend_automation/RequestBuilder/IANBuilder.class

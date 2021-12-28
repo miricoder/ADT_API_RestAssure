@@ -53,7 +53,7 @@ public class PrePROD extends Base {
 /*
  *THEN: Captures WSS response
  */
-        goToSubscriberPage.captureWebSocketResponse();
+        goToSubscriberPage.captureWebSocketResponse(ian);
 
         /**
          *THEN: Verify below points
@@ -63,8 +63,8 @@ public class PrePROD extends Base {
          * [4] If the Admin Portal Sign in Fails remove all exisiting ibpConfig and cameraSTatusList.json files to avoid false positive tests
          */
         VALIDATE_ibpConfig ibpConfigValidation = new VALIDATE_ibpConfig();
-        ibpConfigValidation.ibpConfig();
-        ibpConfigValidation.camConfig_camStatus();
+        ibpConfigValidation.ibpConfig(ian);
+        ibpConfigValidation.camConfig_camStatus(ian);
 
     }
 

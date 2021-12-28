@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="36.957">
+           time="36.718">
   <properties />
   
   
-            <testcase name="INT_Privacy_Test" time="36.957" classname="com.adt.ibp.ui_automation.Privacy.Test.GCP_INT" />
+            <testcase name="INT_Privacy_Test" time="36.718" classname="com.adt.ibp.ui_automation.Privacy.Test.GCP_INT" />
       
 </testsuite>

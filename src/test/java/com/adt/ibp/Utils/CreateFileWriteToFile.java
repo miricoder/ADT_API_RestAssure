@@ -33,6 +33,7 @@ public class CreateFileWriteToFile {
         writeToaFile(path,file,line);
 
     }
+
     public static void createAfile(String path, String fileName){
         try{
             File myObj = new File( path,fileName);

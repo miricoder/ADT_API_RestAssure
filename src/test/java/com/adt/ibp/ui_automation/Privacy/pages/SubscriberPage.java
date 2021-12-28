@@ -10,6 +10,7 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogType;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Properties;
 
 
@@ -18,14 +19,20 @@ public class SubscriberPage extends Base {
     final static Logger logger = Logger.getLogger(SubscriberPage.class);
     public static Properties LOC = new Properties();
 
-    public SubscriberPage goToSubscriberAccount() throws IOException {
+    public SubscriberPage goToSubscriberAccount(String ian) throws IOException {
         BasicConfigurator.configure();
         /*Get WSS Response and evaluate */
-        captureWebSocketResponse();
+        captureWebSocketResponse(ian);
         return this;
     }
 
-    public void captureWebSocketResponse() {
+    public void captureWebSocketResponse(String ian) {
+        Calendar calendar = Calendar.getInstance();
+        String months = String.valueOf(calendar.get(Calendar.MONTH)+1);
+        String dates = String.valueOf(calendar.get(Calendar.DATE));
+        String year = String.valueOf(calendar.get(Calendar.YEAR));
+//        String time = String.valueOf(calendar.get(Calendar.HOUR)+calendar.get(Calendar.MINUTE)+calendar.get(Calendar.SECOND));
+        String fullDate = "_"+year+"_"+months+"_"+dates;
 
         library.customeWait(5);
         LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
@@ -49,17 +56,19 @@ public class SubscriberPage extends Base {
                 } else if (method.equalsIgnoreCase("Network.webSocketFrameReceived")) {
                     System.out.println("Message Received: " + messageJSON.getJSONObject("message").getJSONObject("params").getJSONObject("response").getString("payloadData"));
                     wssLoginRes = messageJSON.getJSONObject("message").getJSONObject("params").getJSONObject("response").getString("payloadData");
-
                     try {
                         if (wssLoginRes.contains("cameraStatusList")) {
-                            CreateFileWriteToFile ibpConfig = new CreateFileWriteToFile("src/test/resources/DynamicValueFiles/", "cameraStatusList.json", wssLoginRes);
+                            CreateFileWriteToFile cameraStatus = new CreateFileWriteToFile("src/test/resources/DynamicValueFiles/", ian+"_cameraStatusList"+fullDate+".json", wssLoginRes);
                         }
                         if (wssLoginRes.contains("ibpConfig")) {
                             /**
                              * cameraConfigList and ibpConfig are returned within the same object and stored in the same ibpConfig.json file
                              */
-                            CreateFileWriteToFile ibpConfig = new CreateFileWriteToFile("src/test/resources/DynamicValueFiles/", "ibpConfig.json", wssLoginRes);
+//                            CreateFileWriteToFile ibpConfig = new CreateFileWriteToFile("src/test/resources/DynamicValueFiles/", "ibpConfig.json", wssLoginRes);
+                            CreateFileWriteToFile ibpConfig = new CreateFileWriteToFile("src/test/resources/DynamicValueFiles/", ian+"_ibpConfig"+fullDate+".json", wssLoginRes);
                         }
+
+
                     } catch (Exception e) {
                         logger.error("Can't find the Json Objects: ");
                         e.printStackTrace();
