@@ -11,6 +11,7 @@
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/Test/GCP_INT.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/CustomListeners_ReportNG.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/FileReader.java
+/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ISOLATED/RemoveFilesTest.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Base.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ExtentManager.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/EmailManager.java
@@ -29,4 +30,3 @@
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ui_automation/Privacy/pages/SubscriberPage.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/Utils/ExcelManager.java
 /Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/backend_automation/apiRunner/APITestRunner.java
-/Users/mmirzayev/Desktop/Framework/ADT_API_RestAssure/src/test/java/com/adt/ibp/ISOLATED/QuickUnitTests.java

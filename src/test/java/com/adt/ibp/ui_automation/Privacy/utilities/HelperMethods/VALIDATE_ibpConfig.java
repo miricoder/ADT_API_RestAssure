@@ -170,11 +170,11 @@ public class VALIDATE_ibpConfig {
                 System.out.println(line+"_cameraStatusList"+fullDate+".json");
                 System.out.println(line+"_ibpConfig"+fullDate+".json");
 
+
             }
         } finally {
             it.close();
         }
-
     }
 }
 

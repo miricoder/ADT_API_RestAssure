@@ -5,9 +5,9 @@ com/adt/ibp/Utils/EmailManager.class
 com/adt/ibp/ui_automation/Privacy/utilities/Reporting/ExtentManager.class
 com/adt/ibp/backend_automation/RequestBuilder/IANBuilder.class
 com/adt/ibp/backend_automation/RequestBuilder/IAN.class
-com/adt/ibp/ISOLATED/QuickUnitTests.class
 com/adt/ibp/ISOLATED/NetMock_AllUrlsInXHR.class
 com/adt/ibp/backend_automation/RequestBuilder/SessionPrefOBJ.class
+com/adt/ibp/Utils/DeleteFilesFromDir$GenericExtFilter.class
 com/adt/ibp/ISOLATED/JWTToken.class
 com/adt/ibp/ui_automation/Privacy/Test/PrePROD.class
 com/adt/ibp/ui_automation/Privacy/utilities/JavaPropertiesManager.class

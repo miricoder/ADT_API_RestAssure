@@ -1,6 +1,5 @@
 package com.adt.ibp.ui_automation.Privacy.utilities;
 
-import com.adt.ibp.Utils.DeleteFilesFromDir;
 import com.google.common.base.Function;
 import com.google.common.io.Files;
 import com.relevantcodes.extentreports.LogStatus;
@@ -624,8 +623,8 @@ public class SeleniumGlobalLibraries {
 				/**
 				 * If not landed in Admin Page remove ibpConfig.json and cameraStatusList.json files to prevent false positive tests
 				 */
-				DeleteFilesFromDir remove_cameraStatusList = new DeleteFilesFromDir("src/test/resources/DynamicValueFiles/cameraStatusList.json");
-				DeleteFilesFromDir remove_ibpConfig = new DeleteFilesFromDir("src/test/resources/DynamicValueFiles/ibpConfig.json");
+//				DeleteFilesFromDir remove_cameraStatusList = new DeleteFilesFromDir("src/test/resources/DynamicValueFiles/cameraStatusList.json");
+//				DeleteFilesFromDir remove_ibpConfig = new DeleteFilesFromDir("src/test/resources/DynamicValueFiles/ibpConfig.json");
 			}
 		}
 

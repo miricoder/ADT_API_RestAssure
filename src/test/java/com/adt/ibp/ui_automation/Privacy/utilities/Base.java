@@ -134,13 +134,10 @@ public class Base {
 				screenshots.add(System.getProperty("user.dir") + "/src/test/resources/DynamicValueFiles/"+line+"_ibpConfig"+"_"+fullDate+".json");
 				sender.sendEmail(screenshots);
 			}
-			DeleteFilesFromDir deleteCameraStatusListJsonFile = new DeleteFilesFromDir("/src/test/resources/DynamicValueFiles/"+line+"_cameraStatusList"+"_"+fullDate+".json");
-			DeleteFilesFromDir deleteIbpConfigJsonFiles = new DeleteFilesFromDir("/src/test/resources/DynamicValueFiles/"+line+"_ibpConfig"+"_"+fullDate+".json");
-
 		} finally {
 			it.close();
 		}
-
+		DeleteFilesFromDir deleteFiles = new DeleteFilesFromDir("src/test/resources/DynamicValueFiles", ".json");
 	}
 
 }
